@@ -69,9 +69,7 @@ class Game extends Component {
   render() {
     return (
       <div>
-        <Nav score={this.state.score} topScore={this.state.topScore} />
-        <Header />
-        <Container>
+        <Container score={this.state.score} topScore={this.state.topScore}>
           {this.state.data.map(item => (
             <Card
               key={item.id}
@@ -82,7 +80,6 @@ class Game extends Component {
             />
           ))}
         </Container>
-        <Footer />
       </div>
     );
   }
